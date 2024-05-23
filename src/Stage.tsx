@@ -113,8 +113,9 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         console.log('setState:' + state['alienKey']);
         if (state != null) {
             this.escalation = state['escalation'];
-            this.alienKey = state['alienKey'] ?? this.defaultAlienKey;
-            this.alien = this.alienMap['alienKey'];
+            this.alienKey = (state['alienKey'] in this.alienMap) ? state['alienKey'] : this.defaultAlienKey;
+
+            this.alien = this.alienMap[state['alienKey']];
         }
     }
 
@@ -214,6 +215,9 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     }
 
     getEvolution(): string {
+        if (!this.alien || !this.alien.evolutions) {
+            return '';
+        }
         return this.alien.evolutions[
             Math.max(...Object.keys(this.alien.evolutions).map(Number).filter(key => key <= this.escalation))
         ];

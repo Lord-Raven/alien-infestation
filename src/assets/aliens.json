@@ -2,11 +2,12 @@
     "aliens": {
         "shoggoth": {
             "name": "Shoggoth",
+            "corePrompt": "There is an evolving, parasitic, tentacular alien on the loose, lurking and possessing characters. Honor its status as you continue the narrative: ",
             "evolutions": {
                 "0": "The alien's presence goes undetected, but vague unsettling events suggest something is afoot.",
-                "5": "The alien is a small tentacular parasite, roughly one foot in total length. It is weak but quick, rapidly seeking a host to attach to. They can render their host unknowing and influence them to make poor or malevolent choices--often sexual in nature.",
-                "20": "The alien is a small mass of squirming tentacles--roughly one yard in radius. It is evasive and fully controls anyone it attaches to, driving them to commit acts of sexual or physical aggression.",
-                "40": "The alien is flailing, deadly mass of writhing tentacular limbs--roughly the size of an adult. It's mere presence inspires horrifying acts of sex or violence."
+                "5": "The alien is a small tentacular parasite, roughly one foot in diameter. It is weak but quick, rapidly seeking a host to attach to. They can render their host unknowing and influence them to make poor or malevolent choices--often sexual in nature.",
+                "10": "The alien is a small mass of squirming tentacles--roughly one yard in diameter. It is evasive and fully controls anyone it attaches to, driving them to commit acts of sexual or physical aggression.",
+                "20": "The alien is flailing, deadly mass of writhing tentacular limbs--roughly the size of an adult. It's mere presence inspires horrifying acts of sex or violence. When it possesses someone, the host becomes virtually unrecognizable."
             }
         }
     }

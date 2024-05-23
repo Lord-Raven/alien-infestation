@@ -143,7 +143,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             /*** @type null | string @description A string to add to the
              end of the final prompt sent to the LLM,
              but that isn't persisted. ***/
-            stageDirections: `[Alien's current status: ${this.getEvolution()}]`,
+            stageDirections: this.getAlienPrompt(),
             /*** @type MessageStateType | null @description the new state after the userMessage. ***/
             messageState: this.buildMessageState(),
             /*** @type null | string @description If not null, the user's message itself is replaced
@@ -216,8 +216,15 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             alignItems: 'stretch'
         }}>
             <div>{this.alien.name} - {this.escalation}<br/>
-            {this.getEvolution()}</div>
+            {this.getAlienPrompt()}</div>
         </div>;
+    }
+
+    getAlienPrompt(): string {
+        if (!this.alien) {
+            return '';
+        }
+        return `[${this.alien.corePrompt} ${this.getEvolution()}]`;
     }
 
     getEvolution(): string {

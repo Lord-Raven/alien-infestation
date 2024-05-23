@@ -110,12 +110,15 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
          or a swipe. Note how neither InitState nor ChatState are given here. They are not for
          state that is affected by swiping.
          ***/
-        console.log('setState:' + state['alienKey']);
-        if (state != null) {
-            this.escalation = state['escalation'];
-            this.alienKey = (state['alienKey'] in this.alienMap) ? state['alienKey'] : this.defaultAlienKey;
+        this.setFromMessageState(state);
 
-            this.alien = this.alienMap[state['alienKey']];
+    }
+
+    setFromMessageState(messageState: MessageStateType) {
+        if (messageState != null) {
+            this.escalation = messageState['escalation'];
+            this.alienKey = (messageState['alienKey'] in this.alienMap) ? messageState['alienKey'] : this.defaultAlienKey;
+            this.alien = this.alienMap[messageState['alienKey']];
         }
     }
 
@@ -132,6 +135,8 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             isBot             /*** @type: boolean
              @description Whether this is itself from another bot, ex. in a group chat. ***/
         } = userMessage;
+        
+        this.escalation++;
         return {
             /*** @type null | string @description A string to add to the
              end of the final prompt sent to the LLM,
@@ -169,7 +174,6 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
              @description Whether this is from a bot, conceivably always true. ***/
         } = botMessage;
 
-        this.escalation++;
         return {
             /*** @type null | string @description A string to add to the
              end of the final prompt sent to the LLM,
@@ -209,7 +213,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             display: 'grid',
             alignItems: 'stretch'
         }}>
-            <div>{this.alienKey} - {this.escalation}<br/>
+            <div>{this.alien.name} - {this.escalation}<br/>
             {this.getEvolution()}</div>
         </div>;
     }

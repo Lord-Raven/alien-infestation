@@ -48,7 +48,7 @@ type ChatStateType = any;
  ***/
 export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateType, ConfigType> {
 
-    readonly defaultAlienKey: string = 'Shoggoth';
+    readonly defaultAlienKey: string = 'shoggoth';
     escalation: number = 0;
     alienKey: string = this.defaultAlienKey;
     alienMap: {[key: string]: Alien} = alienMap.aliens;
@@ -78,6 +78,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             initState,                             // @type: null | InitStateType
             chatState                              // @type: null | ChatStateType
         } = data;
+        this.alienMap = alienMap.aliens;
         this.alien = this.alienMap[this.alienKey];
         console.log("Alien loaded:" + this.alien.name);
         
@@ -207,9 +208,8 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             display: 'grid',
             alignItems: 'stretch'
         }}>
-            <div>{this.alienKey}</div>
-            <div>{this.escalation}</div>
-            <div>{this.getEvolution()}</div>
+            <div>{this.alienKey} - {this.escalation}<br/>
+            {this.getEvolution()}</div>
         </div>;
     }
 

@@ -80,8 +80,10 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         } = data;
         this.alienMap = alienMap.aliens;
         this.alien = this.alienMap[this.alienKey];
+        if (messageState) {
+            this.setFromMessageState(messageState);
+        }
         console.log("Alien loaded:" + this.alien.name);
-        
     }
 
     async load(): Promise<Partial<LoadResponse<InitStateType, ChatStateType, MessageStateType>>> {

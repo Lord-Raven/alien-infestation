@@ -7,17 +7,17 @@ project_name: "Alien Infestation"
 # A short tagline to show in search.
 tagline: "Unleash an alien upon any story."
 
-creator_notes: "This stage adds an escalating alien infestation scenario over top of whatever mundane chat you have going on.
+creator_notes: "This stage adds an escalating alien infestation scenario over top of whatever mundane chat you have going on.\
+\
+[Chatting with a bot on a doomed freighter?](https://venus.chub.ai/characters/Ravenok/adeline-larue-07a7a611) Obviously.\
+[On a mission for a clandestine organization?](https://venus.chub.ai/characters/Ravenok/catalina-viper-torres-02120dfa0928) Of course.\
+[Spending a quiet evening in with the nanny?](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f) Why not?\
+[Just discovered the Underdark and it's already a whole *thing*?](https://venus.chub.ai/characters/Ravenok/vezverel-9ded8b95) Go wild.\
 
-[Chatting with a bot on a doomed freighter?](https://venus.chub.ai/characters/Ravenok/adeline-larue-07a7a611) Obviously.
-[On a mission for a clandestine organization?](https://venus.chub.ai/characters/Ravenok/catalina-viper-torres-02120dfa0928) Of course.
-[Spending a quiet evening in with the nanny?](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f) Why not?
-[Just discovered the Underdark and it's already a whole *thing*?](https://venus.chub.ai/characters/Ravenok/vezverel-9ded8b95) Go wild.
-
-There are configuration options!
--Alien Style: there are a couple of different aliens with different behaviors; one is randomly chosen per chat by default, but you can swap them around (could get weird mid-chat).
--Pacing: controls the rate of escalation in the scenario; things start off kind of eerie and become increasingly dangerous as the alien becomes more powerful.
--Sexual gratuity level: set to taste. Things will tend to get a little sexy by default, but could be cleaner or more screwed up if you so choose.
+There are configuration options!\
+-Alien Archetype: there are a couple of different aliens with different behaviors; one is randomly chosen per chat by default, but you can choose a specific one or swap it around (could get weird mid-chat).\
+-Pacing: controls the rate of escalation in the scenario; things start off kind of eerie and become increasingly dangerous as the alien becomes more powerful.\
+-Sexual gratuity level: set to taste. Things will tend to get a little sexy by default, but could be cleaner or more screwed up if you so choose.\
 -Violence gratuity level: set to taste. Action will be a bit violent by default, but can be adjusted up or down."
 
 # 'PUBLIC', 'PRIVATE', or 'UNLISTED'.

@@ -43,9 +43,12 @@ position: 'NONE'
 
 # Self-explanatory.
 tags:
+  - 'Extension'
+  - 'Action'
   - 'Scenario'
   - 'Science Fiction'
   - 'Alien'
+  - 'Monster'
   - 'NSFW'
 
 # The schema of any user-supplied config.

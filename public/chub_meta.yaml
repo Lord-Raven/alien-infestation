@@ -35,15 +35,26 @@ config_schema:
   type: object
   properties:
     alien:
-      label: Alien
+      title: Alien
       description: Alien present in the scenario.
       type: string
       default: Shoggoth
+    sex:
+      title: Gratuity, Sex
+      type: string
+      default: "Extreme, Even for Chub"
+      enum: ["Chaste", "Rakish", "Extreme, Even for Chub"]
+    violence:
+      title: Gratuity, Violence
+      type: string
+      default: "Paint it Red"
+      enum: ["PG", "R", "Paint it Red"]
     pacing:
-      label: Pacing
+      title: Pacing
       description: Relative rate of escalation during the scenario.
       type: string
-      default: 'Measured'
+      default: Measured
+      enum: ["Glacial", "Plodding", "Measured", "Brisk", "Harrowing"]
     
 
 

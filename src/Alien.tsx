@@ -1,5 +1,7 @@
-export interface AlienMap {
+export interface Aliens {
     aliens: {[key: string]: Alien};
+    sexLevelDescriptions: {[key: string]: string};
+    violenceLevelDescriptions: {[key: string]: string};
 }
 
 export interface Alien {
@@ -10,5 +12,6 @@ export interface Alien {
 
 export interface Evolution {
     description: string;
-    contentLevelDescriptions: {[key: string]: string};
+    sexLevelDescriptions: {[key: string]: string};
+    violenceLevelDescriptions: {[key: string]: string};
 }

@@ -1,8 +1,8 @@
 import {ReactElement} from "react";
 import {StageBase, StageResponse, InitialData, Message} from "@chub-ai/stages-ts";
 import {LoadResponse} from "@chub-ai/stages-ts/dist/types/load";
-import {Alien, AlienMap, Evolution} from "./Alien";
-import alienMap from './assets/aliens.json';
+import {Alien, Aliens, Evolution} from "./Alien";
+import aliens from './assets/aliens.json';
 
 /***
  The type that this stage persists message-level state in.
@@ -69,7 +69,9 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     
     escalation: number = 0;
     alienKey: string = this.defaultAlienKey;
-    alienMap: {[key: string]: Alien} = alienMap.aliens;
+    alienMap: {[key: string]: Alien};
+    sexLevelDescriptions: {[key: string]: string};
+    violenceLevelDescriptions: {[key: string]: string};
     alien: Alien;
     pacing: number;
     sexLevel: number;
@@ -99,7 +101,9 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             initState,                             // @type: null | InitStateType
             chatState                              // @type: null | ChatStateType
         } = data;
-        this.alienMap = alienMap.aliens;
+        this.alienMap = aliens.aliens;
+        this.sexLevelDescriptions = aliens.sexLevelDescriptions;
+        this.violenceLevelDescriptions = aliens.violenceLevelDescriptions;
         this.alien = this.alienMap[this.alienKey];
         this.pacing = this.pacingMap[config.pacing];
         this.sexLevel = this.sexLevelMap[config.sex_level];
@@ -253,21 +257,40 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             return '';
         }
         let evolution: Evolution = this.getEvolution();
-        let contentKey: string = `${this.sexLevel}x${this.violenceLevel}`;
-        console.log('Prompt data:' + evolution + ';' + contentKey + ';' + evolution.contentLevelDescriptions[contentKey]);
-        return `[${this.alien.corePrompt} ${evolution.description} ${evolution.contentLevelDescriptions[contentKey]}]`;
+        let prompt = `[${this.alien.corePrompt} ${evolution.description} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
+        console.log(prompt);
+        return prompt;
     }
 
     getEvolution(): Evolution {
         if (!this.alien || !this.alien.evolutions) {
             return {
                 description: '',
-                contentLevelDescriptions: {}
+                sexLevelDescriptions: {},
+                violenceLevelDescriptions: {}
             };
         }
-        return this.alien.evolutions[
-            Math.max(...Object.keys(this.alien.evolutions).map(Number).filter(key => key <= this.escalation))
-        ];
+        return this.getBestMatch(this.alien.evolutions, this.escalation);
+    }
+
+    getSexLevelDescription(): string {
+        if (!this.alien) {
+            return '';
+        }
+
+        return this.getBestMatch(this.getEvolution().sexLevelDescriptions, this.sexLevel) ?? this.getBestMatch(this.sexLevelDescriptions, this.sexLevel);
+    }
+    getViolenceLevelDescription(): string {
+        if (!this.alien) {
+            return '';
+        }
+
+        return this.getBestMatch(this.getEvolution().violenceLevelDescriptions, this.violenceLevel) ?? this.getBestMatch(this.violenceLevelDescriptions, this.violenceLevel);
+    }
+
+    getBestMatch<Type>(targetMap: {[key: string]: Type}, value: number): Type {
+        return targetMap[
+            Math.max(...Object.keys(targetMap).map(Number).filter(key => key <= value))];
     }
 
 }

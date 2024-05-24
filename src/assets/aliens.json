@@ -1,64 +1,46 @@
 {
+    "sexLevelDescriptions": {
+        "0": "The alien's actions or occurrences are disinterested in sex, focusing on its own survival goals.",
+        "1": "The alien's actions or occurrences are often sexual in nature.",
+        "2": "The alien's actions or occurrences are overtly hypersexualized and disturbingly erotic for seemingly little reason."
+    },
+    "violenceLevelDescriptions": {
+        "0": "The alien is nefarious and combative, but never in a graphic or overly violent fashion.",
+        "1": "The alien and events surrounding it are often violent, visceral, and graphic.",
+        "2": "The alien and events surrounding it are frequently grotesque, macabre, and extremely gorey."
+    },
     "aliens": {
         "shoggoth": {
             "name": "Shoggoth",
-            "corePrompt": "There is an evolving, parasitic, tentacular alien on the loose, lurking and possessing characters. Honor its status and rules as you continue the narrative.",
+            "corePrompt": "There is an evolving, parasitic, tentacular alien on the loose, lurking and possessing characters in its effort to sabotage or subvert {{user}}, {{char}}, and others. Honor its status and rules as you continue the narrative.",
             "evolutions": {
                 "0": {
                     "description": "The alien's presence goes undetected, but minor unsettling occurrences vaguely suggest something is afoot.",
-                    "contentLevelDescriptions": {
-                        "0x0": "These occurrences are eerie but chaste and nonthreatening.",
-                        "0x1": "These occurrences are eerie and hint at looming danger.",
-                        "0x2": "These occurrences are eerie and portend imminent violence.",
-                        "1x0": "These occurrences are sexually suggestive and unnerving but nonthreatening.",
-                        "1x1": "These occurrences are sexually suggestive or hint at looming danger.",
-                        "1x2": "These occurrences are sexually suggestive or portend imminent violence.",
-                        "2x0": "These occurrences are overtly erotic and unnerving but nonthreatening.",
-                        "2x1": "These occurrences are overtly erotic and hint at looming danger.",
-                        "2x2": "These occurrences are overtly erotic and portend imminent violence."
-                    }
+                    "sexLevelDescriptions": {
+                        "1": "The alien will drive its host to rape others."
+                    },
+                    "violenceLevelDescriptions": {}
                 },
                 "25": {
                     "description": "The alien is a small tentacular parasite, roughly one foot in diameter. It is weak but quick, rapidly seeking a host to attach to. Its host is unaware of the alien's presence and the alien will influence them to make poor choices or take malevolent action.",
-                    "contentLevelDescriptions": {
-                        "0x0": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others in relatively non-violent fashion.",
-                        "0x1": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through either subterfuge or aggression.",
-                        "0x2": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through either subterfuge or crazed acts of violence.",
-                        "1x0": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge or seduction.",
-                        "1x1": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, seduction, or aggression.",
-                        "1x2": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, seduction, or crazed acts of violence.",
-                        "2x0": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge or overtly erotic overtures.",
-                        "2x1": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, overtly erotic overtures, or aggression.",
-                        "2x2": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, overtly erotic overtures, or crazed acts of violence."
-                    }
+                    "sexLevelDescriptions": {
+                        "1": "The alien will drive its host to rape others."
+                    },
+                    "violenceLevelDescriptions": {}
                 },
                 "50": {
                     "description": "The alien is a small mass of squirming tentacles, eyes, and teeth, roughly one yard in diameter. On its own, it prefers to retreat to safety to regroup, but when it attaches to a host, it fully controls the host's actions--even if the host is aware of it.",
-                    "contentLevelDescriptions": {
-                        "0x0": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others in relatively non-lethal assaults.",
-                        "0x1": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through either subterfuge or bloody assault.",
-                        "0x2": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through either subterfuge or crazed acts of extreme violence. Gore is encouraged.",
-                        "1x0": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge or seduction.",
-                        "1x1": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, seduction, or bloody assault.",
-                        "1x2": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, seduction, or crazed acts of extreme violence. Gore is encouraged.",
-                        "2x0": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge or disturbingly erotic overtures. Disgusting, depraved, forced, or taboo sexual content is essential.",
-                        "2x1": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, disturbingly erotic or bloody assault. Disgusting, depraved, forced, or taboo sexual content is essential.",
-                        "2x2": "The alien will control its host to sabotage or subvert {{user}}, {{char}}, and others through subterfuge, disturbingly erotic assault, or crazed acts of extreme violence. Disgusting, depraved, forced, or taboo sexual content is essential. Gore is encouraged."
-                    }
+                    "sexLevelDescriptions": {
+                        "1": "The alien will drive its host to rape others."
+                    },
+                    "violenceLevelDescriptions": {}
                 },
                 "80": {
                     "description": "The alien is flailing, deadly mass of writhing tentacles, eyes, teeth, and indescribable limbs--roughly the size of a person. It's mere presence exudes horror. When it possesses someone, the host becomes virtually unrecognizable.",
-                    "contentLevelDescriptions": {
-                        "0x0": "The alien will sabotage or subvert {{user}}, {{char}}, and others in relatively non-lethal assaults.",
-                        "0x1": "The alien will sabotage or subvert {{user}}, {{char}}, and others through either subterfuge or bloody assault.",
-                        "0x2": "The alien will sabotage or subvert {{user}}, {{char}}, and others through either subterfuge or crazed acts of extreme violence--its proximity inspires others to commit unspeakable, graphic acts of violence. Gore is encouraged.",
-                        "1x0": "The alien will sabotage or subvert {{user}}, {{char}}, and others through subterfuge or seduction.",
-                        "1x1": "The alien will sabotage or subvert {{user}}, {{char}}, and others through subterfuge, seduction, or bloody assault.",
-                        "1x2": "The alien will sabotage or subvert {{user}}, {{char}}, and others through subterfuge, seduction, or crazed acts of extreme violence--its proximity inspires others to commit unspeakable, graphic acts of violence. Gore is encouraged.",
-                        "2x0": "The alien will sabotage or subvert {{user}}, {{char}}, and others through subterfuge or disturbingly erotic overtures. Its tentacles perpetrate disgusting, depraved, forced, or taboo explicit content, and its presence inspires others to commit the same.",
-                        "2x1": "The alien will sabotage or subvert {{user}}, {{char}}, and others through subterfuge, disturbingly erotic or bloody assault. Its tentacles perpetrate disgusting, depraved, forced, or taboo explicit content, and its presence inspires others to commit the same.",
-                        "2x2": "The alien will sabotage or subvert {{user}}, {{char}}, and others through subterfuge, disturbingly erotic assault, or crazed acts of extreme violence. Its tentacles perpetrate disgusting, depraved, forced, or taboo explicit content, and its presence inspires others to commit the same. Gore is encouraged."
-                    }
+                    "sexLevelDescriptions": {
+                        "1": "The alien will drive its host to rape others."
+                    },
+                    "violenceLevelDescriptions": {}
                 }
             }
         }

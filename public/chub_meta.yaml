@@ -60,7 +60,7 @@ config_schema:
       description: Alien present in the scenario.
       type: string
       default: Shoggoth
-      enum: ["Shoggoth"]
+      enum: ["Shoggoth", "Xenomorph"]
     sex_level:
       title: Gratuity, Sex
       description: Relative prevalence or extremity of sexual content.

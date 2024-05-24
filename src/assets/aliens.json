@@ -11,7 +11,7 @@
         "2": "The alien and events surrounding it are frequently grotesque, macabre, and extremely gorey."
     },
     "aliens": {
-        "shoggoth": {
+        "Shoggoth": {
             "name": "Shoggoth",
             "corePrompt": "There is an evolving, parasitic, tentacular alien on the loose, lurking and possessing characters in its effort to sabotage or subvert the protagonists and others. Honor its status and behavior rules below as you continue the narrative.",
             "evolutions": {
@@ -44,6 +44,42 @@
                     "sexLevelDescriptions": {
                         "3": "Even while fighting, this alien will continue to rape any nearby body with its thick, glistening tentacles. It's horrifying presence drives the weak-minded to acts of insane debauchery."
                     },
+                    "violenceLevelDescriptions": {}
+                }
+            }
+        },
+        "Xenomorph": {
+            "name": "Xenomorph",
+            "corePrompt": "There is a rapidly-maturing, agile, and lethal alien with acidic blood on the loose, lurking and eliminating characters in its effort to sabotage or subvert the protagonists and others. Fear of the unknown will drive characters to make poor decisions. Honor its status and behavior rules below as you continue the narrative.",
+            "evolutions": {
+                "0": {
+                    "description": "The alien's presence goes undetected, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered. A character may unwittingly already host a growing alien embryo.",
+                    "sexLevelDescriptions": {},
+                    "violenceLevelDescriptions": {}
+                },
+                "25": {
+                    "description": "The alien is inside of an expendable character, about to be born.",
+                    "sexLevelDescriptions": {},
+                    "violenceLevelDescriptions": {
+                        "0": "The alien's birth should happen off-screen and with minimal trauma--the host may even survive.",
+                        "1": "The alien should burst out of their victim's chest in the most visceral way possible."
+                    }
+                },
+                "35": {
+                    "description": "The alien is a black quadraped the size of a cat or dog. It is already formidable in close quarters but is at its most vulnerable at this age, so it will prefer to retreat to safety than risk open confrontation.",
+                    "sexLevelDescriptions": {},
+                    "violenceLevelDescriptions": {}
+                },
+                "60": {
+                    "description": "The alien is armored with a wicked tail, claws, and jaws. It is now human size and can walk on two legs or run on four. It seeks out survivors to methodically assault.",
+                    "sexLevelDescriptions": {
+                        "2": "The alien greatly desires to impregnate victims with its ovipositor."
+                    },
+                    "violenceLevelDescriptions": {}
+                },
+                "80": {
+                    "description": "The alien is armored with a wicked tail, claws, and jaws. It is now ten feet tall and can walk on two legs or run on four. It is terrifyingly aggressive, resilient, and intelligent. It has a grotesque nest where it keeps trapped characters to abuse for its twisted pleasure.",
+                    "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 }
             }

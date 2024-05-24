@@ -48,7 +48,7 @@ type ChatStateType = any;
  ***/
 export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateType, ConfigType> {
 
-    readonly defaultAlienKey: string = 'shoggoth';
+    readonly defaultAlien: string = 'Shoggoth';
     readonly defaultPacing: string = 'Deliberate';
     readonly defaultSexLevel: string = 'Rakish';
     readonly DefaultViolenceLevel: string = 'Bloody';
@@ -72,7 +72,6 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     }
     
     escalation: number = 0;
-    alienKey: string = this.defaultAlienKey;
     alienMap: {[key: string]: Alien};
     sexLevelDescriptions: {[key: string]: string};
     violenceLevelDescriptions: {[key: string]: string};
@@ -102,7 +101,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.alienMap = aliens.aliens;
         this.sexLevelDescriptions = aliens.sexLevelDescriptions;
         this.violenceLevelDescriptions = aliens.violenceLevelDescriptions;
-        this.alien = this.alienMap[this.alienKey];
+        this.alien = this.alienMap[config.alien] ?? this.pacingMap[this.defaultAlien];
         this.pacing = this.pacingMap[config.pacing] ?? this.pacingMap[this.defaultPacing];
         this.sexLevel = this.sexLevelMap[config.sex_level] ?? this.sexLevelMap[this.defaultSexLevel];
         this.violenceLevel = this.violenceLevelMap[config.violence_level] ?? this.violenceLevelMap[this.DefaultViolenceLevel];
@@ -146,8 +145,6 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     setFromMessageState(messageState: MessageStateType) {
         if (messageState != null) {
             this.escalation = messageState['escalation'];
-            this.alienKey = (messageState['alienKey'] in this.alienMap) ? messageState['alienKey'] : this.defaultAlienKey;
-            this.alien = this.alienMap[messageState['alienKey']];
         }
     }
 
@@ -287,9 +284,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     }
 
     buildMessageState(): {[key: string]: any} {
-        return {'escalation': this.escalation,
-                'alienKey': this.alienKey
-        };
+        return {'escalation': this.escalation};
     }
 
 }

@@ -104,6 +104,10 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.pacing = this.pacingMap[config.pacing];
         this.sexLevel = this.sexLevelMap[config.sexLevel];
         this.violenceLevel = this.violenceLevelMap[config.violenceLevel];
+        console.log(config);
+        console.log(`${config.pacing} = ${this.pacing}`);
+        console.log(`${config.sexLevel} = ${this.sexLevel}`);
+        console.log(`${config.violenceLevel} = ${this.violenceLevel}`);
         if (messageState) {
             this.setFromMessageState(messageState);
         }

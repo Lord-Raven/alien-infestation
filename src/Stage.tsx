@@ -102,12 +102,12 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.alienMap = alienMap.aliens;
         this.alien = this.alienMap[this.alienKey];
         this.pacing = this.pacingMap[config.pacing];
-        this.sexLevel = this.sexLevelMap[config.sexLevel];
-        this.violenceLevel = this.violenceLevelMap[config.violenceLevel];
+        this.sexLevel = this.sexLevelMap[config.sex_level];
+        this.violenceLevel = this.violenceLevelMap[config.violence_level];
         console.log(config);
         console.log(`${config.pacing} = ${this.pacing}`);
-        console.log(`${config.sexLevel} = ${this.sexLevel}`);
-        console.log(`${config.violenceLevel} = ${this.violenceLevel}`);
+        console.log(`${config.sex_level} = ${this.sexLevel}`);
+        console.log(`${config.violence_level} = ${this.violenceLevel}`);
         if (messageState) {
             this.setFromMessageState(messageState);
         }

@@ -40,13 +40,13 @@ config_schema:
       type: string
       default: Shoggoth
       enum: ["Shoggoth"]
-    sexLevel:
+    sex_level:
       title: Gratuity, Sex
       description: Relative prevalence or extremity of sexual content.
       type: string
       default: "Extreme"
       enum: ["Chaste", "Rakish", "Extreme"]
-    violenceLevel:
+    violence_level:
       title: Gratuity, Violence
       description: Relative prevalence or extremity of violent content.
       type: string

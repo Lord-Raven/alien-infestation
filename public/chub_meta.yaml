@@ -44,20 +44,20 @@ config_schema:
       title: Gratuity, Sex
       description: Relative prevalence or extremity of sexual content.
       type: string
-      default: "Extreme"
-      enum: ["Chaste", "Rakish", "Extreme"]
+      default: "Debaucherous"
+      enum: ["Chaste", "Rakish", "Debaucherous", "Depraved"]
     violence_level:
       title: Gratuity, Violence
       description: Relative prevalence or extremity of violent content.
       type: string
-      default: "Extreme"
-      enum: ["PG", "R", "Extreme"]
+      default: "Violent"
+      enum: ["Nerf", "Violent", "Gorey"]
     pacing:
       title: Pacing
       description: Relative rate of escalation during the scenario.
       type: string
-      default: "Measured"
-      enum: ["Glacial", "Plodding", "Measured", "Brisk", "Harrowing"]
+      default: "Deliberate"
+      enum: ["Glacial", "Plodding", "Deliberate", "Brisk", "Harrowing"]
     
 
 

@@ -52,19 +52,20 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     readonly pacingMap: {[key: string]: number} = {
         "Glacial": 1, 
         "Plodding": 3,
-        "Measured": 5,
+        "Deliberate": 5,
         "Brisk": 7,
         "Harrowing": 9
     }
     readonly sexLevelMap: {[key: string]: number} = {
         "Chaste": 0,
         "Rakish": 1,
-        "Extreme": 2
+        "Debaucherous": 2,
+        "Depraved": 3
     }
     readonly violenceLevelMap: {[key: string]: number} = {
-        "PG": 0,
-        "R": 1,
-        "Extreme": 2
+        "Nerf": 0,
+        "Bloody": 1,
+        "Gorey": 2
     }
     
     escalation: number = 0;
@@ -278,14 +279,14 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             return '';
         }
 
-        return this.getBestMatch(this.getEvolution().sexLevelDescriptions, this.sexLevel) ?? this.getBestMatch(this.sexLevelDescriptions, this.sexLevel);
+        return `${this.getBestMatch(this.sexLevelDescriptions, this.sexLevel)} ${this.getBestMatch(this.getEvolution().sexLevelDescriptions, this.sexLevel) ?? ''}`;
     }
     getViolenceLevelDescription(): string {
         if (!this.alien) {
             return '';
         }
 
-        return this.getBestMatch(this.getEvolution().violenceLevelDescriptions, this.violenceLevel) ?? this.getBestMatch(this.violenceLevelDescriptions, this.violenceLevel);
+        return `${this.getBestMatch(this.violenceLevelDescriptions, this.violenceLevel)} ${this.getBestMatch(this.getEvolution().violenceLevelDescriptions, this.violenceLevel) ?? ''}`;
     }
 
     getBestMatch<Type>(targetMap: {[key: string]: Type}, value: number): Type {

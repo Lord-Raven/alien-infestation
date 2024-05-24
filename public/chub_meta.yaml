@@ -9,16 +9,21 @@ tagline: "Unleash an alien upon any story."
 
 creator_notes: "This stage adds an escalating alien infestation scenario over top of whatever mundane chat you have going on.<br>
 <br>
-[Chatting with a bot on a doomed freighter?](https://venus.chub.ai/characters/Ravenok/adeline-larue-07a7a611) Obviously.<br>
-[On a mission for a clandestine organization?](https://venus.chub.ai/characters/Ravenok/catalina-viper-torres-02120dfa0928) Of course.<br>
-[Spending a quiet evening in with the nanny?](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f) Why not?<br>
-[Just discovered the Underdark and it's already a whole *thing*?](https://venus.chub.ai/characters/Ravenok/vezverel-9ded8b95) Go wild.<br>
+Whether you're [trapped aboard a doomed space freighter](https://venus.chub.ai/characters/Ravenok/adeline-larue-07a7a611) 
+or just [spending a quiet evening in with the nanny](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f), 
+an alien attack can come at any moment--just add this stage to your chat and watch things take an unsettling turn for the worse.<br>
 <br>
 # Configuration!<br>
-- Alien Archetype: there are a couple of different aliens with different behaviors; one is randomly chosen per chat by default, but you can choose a specific one or swap it around (could get weird mid-chat).<br>
 - Pacing: controls the rate of escalation in the scenario; things start off kind of eerie and become increasingly dangerous as the alien becomes more powerful.<br>
 - Sexual gratuity level: set to taste. Things will tend to get a little sexy by default, but could be cleaner or more screwed up if you so choose.<br>
-- Violence gratuity level: set to taste. Action will be a bit violent by default, but can be adjusted up or down."
+- Violence gratuity level: set to taste. Action will be a bit violent by default, but can be adjusted up or down.<br>
+Of course, this content is also influenced by the bot and other elements sent to the LLM, so these settings are just additional nudges in one direction or the other.<br>
+<br>
+# Next Up<br>
+It's still a bit work-in-progress, so you may see some debug output in the console, but the core concept is functional. 
+I'm going to add at least a couple of additional alien scenarios, 
+to be randomly selected per-chat (or deliberately selected through the config), to increase replayability a bit.
+"
 
 # 'PUBLIC', 'PRIVATE', or 'UNLISTED'.
 visibility: 'UNLISTED'
@@ -62,8 +67,8 @@ config_schema:
       title: Gratuity, Violence
       description: Relative prevalence or extremity of violent content.
       type: string
-      default: "Violent"
-      enum: ["Nerf", "Violent", "Gorey"]
+      default: "Bloody"
+      enum: ["Nerf", "Bloody", "Gorey"]
     pacing:
       title: Pacing
       description: Relative rate of escalation during the scenario.

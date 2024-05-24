@@ -49,6 +49,9 @@ type ChatStateType = any;
 export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateType, ConfigType> {
 
     readonly defaultAlienKey: string = 'shoggoth';
+    readonly defaultPacing: string = 'Deliberate';
+    readonly defaultSexLevel: string = 'Rakish';
+    readonly DefaultViolenceLevel: string = 'Bloody';
     readonly pacingMap: {[key: string]: number} = {
         "Glacial": 1, 
         "Plodding": 3,
@@ -100,9 +103,9 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.sexLevelDescriptions = aliens.sexLevelDescriptions;
         this.violenceLevelDescriptions = aliens.violenceLevelDescriptions;
         this.alien = this.alienMap[this.alienKey];
-        this.pacing = this.pacingMap[config.pacing] ?? this.pacingMap[config.pacing.default];
-        this.sexLevel = this.sexLevelMap[config.sex_level] ?? this.sexLevelMap[config.sex_level.default];
-        this.violenceLevel = this.violenceLevelMap[config.violence_level] ?? this.violenceLevelMap[config.violence_level.default];
+        this.pacing = this.pacingMap[config.pacing] ?? this.pacingMap[this.defaultPacing];
+        this.sexLevel = this.sexLevelMap[config.sex_level] ?? this.sexLevelMap[this.defaultSexLevel];
+        this.violenceLevel = this.violenceLevelMap[config.violence_level] ?? this.violenceLevelMap[this.DefaultViolenceLevel];
         console.log(config);
         if (messageState) {
             this.setFromMessageState(messageState);
@@ -248,7 +251,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         }
         let evolution: Evolution = this.getEvolution();
         let prompt = `[${this.alien.corePrompt} ${evolution.description} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
-        console.log(prompt);
+        console.log(`${this.escalation} - ${prompt}`);
         return prompt;
     }
 

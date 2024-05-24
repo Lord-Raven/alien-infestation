@@ -249,7 +249,8 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             return '';
         }
         let evolution: Evolution = this.getEvolution();
-        let contentKey: string = this.sexLevel + "x" + this.violenceLevel;
+        let contentKey: string = `${this.sexLevel}x${this.violenceLevel}`;
+        console.log('Prompt data:' + evolution + ';' + contentKey + ';' + evolution.contentLevelDescriptions[contentKey]);
         return `[${this.alien.corePrompt} ${evolution.description} ${evolution.contentLevelDescriptions[contentKey]}]`;
     }
 

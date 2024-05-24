@@ -13,20 +13,23 @@ Whether you're [trapped aboard a doomed space freighter](https://venus.chub.ai/c
 or just [spending a quiet evening in with the nanny](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f), 
 an alien attack can come at any moment--just add this stage to your chat and watch things take an unsettling turn for the worse.<br>
 <br>
-# Configuration!<br>
-- Pacing: controls the rate of escalation in the scenario; things start off kind of eerie and become increasingly dangerous as the alien becomes more powerful.<br>
-- Sexual gratuity level: set to taste. Things will tend to get a little sexy by default, but could be cleaner or more screwed up if you so choose.<br>
-- Violence gratuity level: set to taste. Action will be a bit violent by default, but can be adjusted up or down.<br>
-Of course, this content is also influenced by the bot and other elements sent to the LLM, so these settings are just additional nudges in one direction or the other.<br>
+**Configuration!**<br>
+* Pacing: controls the rate of escalation in the scenario; things start off kind of eerie and become increasingly dangerous as the alien becomes more powerful.<br>
+* Sexual gratuity level: the scenario tends to be a little sexy by default, but can be cleaner or (much) more screwed up, if you so desire.<br>
+* Violence gratuity level: action will be a bit violent by default, but can be adjusted up or down.<br>
+Of course, this content is also influenced by the bot and other elements sent to the LLM, so these settings are just prominent nudges in one direction or the other.<br>
 <br>
-# Next Up<br>
-It's still a bit work-in-progress, so you may see some debug output in the console, but the core concept is functional. 
-I'm going to add at least a couple of additional alien scenarios, 
-to be randomly selected per-chat (or deliberately selected through the config), to increase replayability a bit.
+**Next Up**<br>
+It's still a bit work-in-progress, so you may see some debug output in the console, but the core concept is functional.
+Essentially, the longer the chat goes on (from the point where the stage was added), the more dire the alien situation becomes. 
+I'd like to make the escalation a bit more intelligent, potentially assessing the scope of time a response represents, 
+so waiting around advances the alien's evolution more quickly than having a conversation; I have an idea of how to achieve this, but it's still in-progress. 
+I'm also working on adding at least a couple of additional alien scenarios, 
+to be randomly selected per-chat (or deliberately selected through the settings), to increase replayability a bit.
 "
 
 # 'PUBLIC', 'PRIVATE', or 'UNLISTED'.
-visibility: 'UNLISTED'
+visibility: 'PUBLIC'
 
 # 'ADJACENT' | 'NONE' | 'COVER' | 'FULLSCREEN'
 # 'ADJACENT' is default. The frame will display on the side of the
@@ -43,6 +46,7 @@ tags:
   - 'Scenario'
   - 'Science Fiction'
   - 'Alien'
+  - 'NSFW'
 
 # The schema of any user-supplied config.
 # If your stage requires a configuration but has no

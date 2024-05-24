@@ -1,7 +1,7 @@
 import {ReactElement} from "react";
 import {StageBase, StageResponse, InitialData, Message} from "@chub-ai/stages-ts";
 import {LoadResponse} from "@chub-ai/stages-ts/dist/types/load";
-import {Alien, AlienMap} from "./Alien";
+import {Alien, AlienMap, Evolution} from "./Alien";
 import alienMap from './assets/aliens.json';
 
 /***
@@ -49,10 +49,31 @@ type ChatStateType = any;
 export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateType, ConfigType> {
 
     readonly defaultAlienKey: string = 'shoggoth';
+    readonly pacingMap: {[key: string]: number} = {
+        "Glacial": 1, 
+        "Plodding": 3,
+        "Measured": 5,
+        "Brisk": 7,
+        "Harrowing": 9
+    }
+    readonly sexLevelMap: {[key: string]: number} = {
+        "Chaste": 0,
+        "Rakish": 1,
+        "Extreme": 2
+    }
+    readonly violenceLevelMap: {[key: string]: number} = {
+        "PG": 0,
+        "R": 1,
+        "Extreme": 2
+    }
+    
     escalation: number = 0;
     alienKey: string = this.defaultAlienKey;
     alienMap: {[key: string]: Alien} = alienMap.aliens;
     alien: Alien;
+    pacing: number;
+    sexLevel: number;
+    violenceLevel: number;
 
     buildMessageState(): {[key: string]: any} {
         return {'escalation': this.escalation,
@@ -80,6 +101,9 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         } = data;
         this.alienMap = alienMap.aliens;
         this.alien = this.alienMap[this.alienKey];
+        this.pacing = this.pacingMap[config.pacing];
+        this.sexLevel = this.sexLevelMap[config.sexLevel];
+        this.violenceLevel = this.violenceLevelMap[config.violenceLevel];
         if (messageState) {
             this.setFromMessageState(messageState);
         }
@@ -138,7 +162,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
              @description Whether this is itself from another bot, ex. in a group chat. ***/
         } = userMessage;
         
-        this.escalation++;
+        this.escalation += this.pacing;
         return {
             /*** @type null | string @description A string to add to the
              end of the final prompt sent to the LLM,
@@ -224,12 +248,17 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         if (!this.alien) {
             return '';
         }
-        return `[${this.alien.corePrompt} ${this.getEvolution()}]`;
+        let evolution: Evolution = this.getEvolution();
+        let contentKey: string = this.sexLevel + "x" + this.violenceLevel;
+        return `[${this.alien.corePrompt} ${evolution.description} ${evolution.contentLevelDescriptions[contentKey]}]`;
     }
 
-    getEvolution(): string {
+    getEvolution(): Evolution {
         if (!this.alien || !this.alien.evolutions) {
-            return '';
+            return {
+                description: '',
+                contentLevelDescriptions: {}
+            };
         }
         return this.alien.evolutions[
             Math.max(...Object.keys(this.alien.evolutions).map(Number).filter(key => key <= this.escalation))

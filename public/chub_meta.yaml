@@ -39,35 +39,25 @@ config_schema:
       description: Alien present in the scenario.
       type: string
       default: Shoggoth
-    sex:
+      enum: ["Shoggoth"]
+    sexLevel:
       title: Gratuity, Sex
-      type: integer
-      default: 2
-      enum: [0, 1, 2]
-      x-enum-varnames:
-        -"Chaste"
-        -"Rakish"
-        -"Extreme, Even for Chub"
-    violence:
+      description: Relative prevalence or extremity of sexual content.
+      type: string
+      default: "Extreme"
+      enum: ["Chaste", "Rakish", "Extreme"]
+    violenceLevel:
       title: Gratuity, Violence
-      type: integer
-      default: 2
-      enum: [0, 1, 2]
-      x-enumNames: ["PG", "R", "Paint it Red"]
-      # enum: ["PG", "R", "Paint it Red"]
+      description: Relative prevalence or extremity of violent content.
+      type: string
+      default: "Extreme"
+      enum: ["PG", "R", "Extreme"]
     pacing:
       title: Pacing
       description: Relative rate of escalation during the scenario.
-      type: integer
-      #default: Measured
-      #enum: ["Glacial", "Plodding", "Measured", "Brisk", "Harrowing"]
-      oneOf:
-        - title: Glacial
-          const: 0
-        - title: Measured
-          const: 2
-        - title: Harrowing
-          const: 4
+      type: string
+      default: "Measured"
+      enum: ["Glacial", "Plodding", "Measured", "Brisk", "Harrowing"]
     
 
 

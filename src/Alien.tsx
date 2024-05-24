@@ -5,5 +5,10 @@ export interface AlienMap {
 export interface Alien {
     name: string;
     corePrompt: string;
-    evolutions: {[key: string]: string};
+    evolutions: {[key: string]: Evolution};
+}
+
+export interface Evolution {
+    description: string;
+    contentLevelDescriptions: {[key: string]: string};
 }

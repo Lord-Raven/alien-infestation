@@ -31,11 +31,21 @@ position: 'ADJACENT'
 # If your stage requires a configuration but has no
 #   defined schema, it won't work.
 config_schema:
+  title: Alien Infestation Settings
   type: object
   properties:
-    health:
-      type: integer
-      default: 100
+    alien:
+      label: Alien
+      description: Alien present in the scenario.
+      type: string
+      default: Shoggoth
+    pacing:
+      label: Pacing
+      description: Relative rate of escalation during the scenario.
+      type: string
+      default: 'Measured'
+    
+
 
 # The schema of the state that you store.
 # This isn't needed even if you do store state,

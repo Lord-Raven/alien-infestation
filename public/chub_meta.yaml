@@ -41,20 +41,33 @@ config_schema:
       default: Shoggoth
     sex:
       title: Gratuity, Sex
-      type: string
-      default: "Extreme, Even for Chub"
-      enum: ["Chaste", "Rakish", "Extreme, Even for Chub"]
+      type: integer
+      default: 2
+      enum: [0, 1, 2]
+      x-enum-varnames:
+        -"Chaste"
+        -"Rakish"
+        -"Extreme, Even for Chub"
     violence:
       title: Gratuity, Violence
-      type: string
-      default: "Paint it Red"
-      enum: ["PG", "R", "Paint it Red"]
+      type: integer
+      default: 2
+      enum: [0, 1, 2]
+      x-enumNames: ["PG", "R", "Paint it Red"]
+      # enum: ["PG", "R", "Paint it Red"]
     pacing:
       title: Pacing
       description: Relative rate of escalation during the scenario.
-      type: string
-      default: Measured
-      enum: ["Glacial", "Plodding", "Measured", "Brisk", "Harrowing"]
+      type: integer
+      #default: Measured
+      #enum: ["Glacial", "Plodding", "Measured", "Brisk", "Harrowing"]
+      oneOf:
+        - title: Glacial
+          const: 0
+        - title: Measured
+          const: 2
+        - title: Harrowing
+          const: 4
     
 
 

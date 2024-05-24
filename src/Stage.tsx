@@ -78,12 +78,6 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     sexLevel: number;
     violenceLevel: number;
 
-    buildMessageState(): {[key: string]: any} {
-        return {'escalation': this.escalation,
-                'alienKey': this.alienKey
-        };
-    }
-
     constructor(data: InitialData<InitStateType, ChatStateType, MessageStateType, ConfigType>) {
         /***
          This is the first thing called in the stage,
@@ -110,9 +104,6 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.sexLevel = this.sexLevelMap[config.sex_level];
         this.violenceLevel = this.violenceLevelMap[config.violence_level];
         console.log(config);
-        console.log(`${config.pacing} = ${this.pacing}`);
-        console.log(`${config.sex_level} = ${this.sexLevel}`);
-        console.log(`${config.violence_level} = ${this.violenceLevel}`);
         if (messageState) {
             this.setFromMessageState(messageState);
         }
@@ -248,8 +239,6 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             display: 'grid',
             alignItems: 'stretch'
         }}>
-            <div>{this.alien.name} - {this.escalation}<br/>
-            {this.getAlienPrompt()}</div>
         </div>;
     }
 
@@ -292,6 +281,12 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     getBestMatch<Type>(targetMap: {[key: string]: Type}, value: number): Type {
         return targetMap[
             Math.max(...Object.keys(targetMap).map(Number).filter(key => key <= value))];
+    }
+
+    buildMessageState(): {[key: string]: any} {
+        return {'escalation': this.escalation,
+                'alienKey': this.alienKey
+        };
     }
 
 }

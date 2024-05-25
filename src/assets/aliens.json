@@ -50,15 +50,15 @@
         },
         "Xenomorph": {
             "name": "Xenomorph",
-            "corePrompt": "There is a rapidly-maturing, agile, and lethal alien with acidic blood on the loose, lurking and eliminating characters in its effort to survive and multiply. Striking from the shadows, it provokes fear and poor decision-making in other characters. Honor its status and behavior rules below as you continue the narrative.",
+            "corePrompt": "There is a rapidly-maturing, lithe, and lethal quadrupedal alien with acidic blood on the loose, lurking and eliminating characters in its effort to survive and multiply. Striking from the shadows, it provokes fear and poor decision-making in other characters. Honor its status and behavior rules below as you continue the narrative.",
             "evolutions": {
                 "0": {
-                    "description": "The alien's presence goes undetected, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered. A character may unwittingly already host a growing alien embryo.",
+                    "description": "The alien's presence goes undetected, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered or a character may unwittingly already host a growing alien embryo.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },
                 "25": {
-                    "description": "The alien is inside of an expendable character, about to be born. They will emerge as a small, black quadruped.",
+                    "description": "The alien is inside of an expendable character, about to be born. It will emerge as a small, black quadruped that will quickly withdraw to safety to grow.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {
                         "0": "The alien's birth should happen off-screen and with minimal trauma--the host may even survive.",

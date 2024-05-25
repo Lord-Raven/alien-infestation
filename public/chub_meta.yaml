@@ -7,7 +7,7 @@ project_name: "Alien Infestation"
 # A short tagline to show in search.
 tagline: "Unleash an alien upon any story."
 
-creator_notes: "This stage adds an escalating alien infestation scenario over top of whatever mundane chat you have going on.<br>
+creator_notes: "This stage introduces an escalating alien infestation scenario over top of whatever mundane chat you have going on.<br>
 <br>
 Whether you're [trapped aboard a doomed space freighter](https://venus.chub.ai/characters/Ravenok/adeline-larue-07a7a611) 
 or just [spending a quiet evening in with the nanny](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f), 
@@ -15,8 +15,8 @@ an alien attack can come at any moment--just add this stage to your chat and wat
 <br>
 **What it Does**<br>
 An alien is gradually introduced and the longer the chat goes on (from the point where the stage was added), the more dangerous the alien becomes.<br>
-It's still a little work-in-progress, so you may see some debug output in the console. If you see errors, please report them in the comments :).
-
+It's still a little work-in-progress, so you may see some debug output in the console. If you see errors, please report them in the comments :).<br>
+<br>
 **Configuration!**<br>
 You can tweak a few of the stage's behaviors:<br>
 * Pacing: controls the rate of escalation in the scenario; things start off kind of eerie and become increasingly dangerous as the alien becomes more powerful.<br>

@@ -50,10 +50,10 @@
         },
         "Xenomorph": {
             "name": "Xenomorph",
-            "corePrompt": "There is a rapidly-maturing, lithe, and lethal quadrupedal alien with acidic blood on the loose, lurking and eliminating characters in its effort to survive and multiply. Striking from the shadows, it provokes fear and poor decision-making in other characters. Honor its status and behavior rules below as you continue the narrative.",
+            "corePrompt": "There is a rapidly-maturing, lithe, and lethal quadrupedal alien with acidic blood on the loose--similar to the titular creatures of the Aliens franchise--, lurking and eliminating characters in its effort to survive and multiply. Honor its status and behavior rules below as you continue the narrative.",
             "evolutions": {
                 "0": {
-                    "description": "The alien's presence goes undetected, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered or a character may unwittingly already host a growing alien embryo.",
+                    "description": "The alien is not yet present, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered or a character may unwittingly already host a growing alien embryo.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },

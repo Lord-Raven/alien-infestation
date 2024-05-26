@@ -13,15 +13,15 @@
     "aliens": {
         "Shoggoth": {
             "name": "Shoggoth",
-            "corePrompt": "There is an evolving, parasitic, tentacular alien on the loose, lurking and possessing characters in its effort to sabotage or subvert the protagonists and others. Honor its status and behavior rules below as you continue the narrative.",
+            "corePrompt": "There is a malevolent alien presence on the loose, lurking and possessing characters in its effort to sabotage or subvert the protagonists and others. Honor its current status and behavior rules below as you continue the narrative.",
             "evolutions": {
                 "0": {
-                    "description": "The alien's presence goes undetected, but minor unsettling occurrences vaguely suggest something is afoot.",
+                    "description": "The alien's presence continues to go undetected, but vaguely unsettling occurrences suggest something is afoot.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },
                 "25": {
-                    "description": "The alien is a small tentacular parasite, roughly one foot in diameter. It is weak but quick, rapidly seeking a host to attach to. Its host is unaware of the alien's presence and the alien will influence them to make poor choices or take malevolent action.",
+                    "description": "The alien is a small, slimy, amorphous, tentacular parasite, no more than one foot in diameter. It is weak but quick, rapidly seeking a host to attach to. It can influence any creature it touches. Its host is unaware of the alien's presence and the alien will influence them to make poor choices or take destructive action. If it cannot claim a host, it will retreat from conflict and await someone unsuspecting.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },
@@ -50,7 +50,7 @@
         },
         "Xenomorph": {
             "name": "Xenomorph",
-            "corePrompt": "There alien on the loose--similar to the titular creatures of the Aliens franchise--, lurking and eliminating characters in its effort to survive and multiply. Honor its current status and behavior rules below as you continue the narrative.",
+            "corePrompt": "There's an alien on the loose--similar to the titular creatures of the Aliens franchise--, lurking and eliminating characters in its effort to survive and multiply. Honor its current status and behavior rules below as you continue the narrative.",
             "evolutions": {
                 "0": {
                     "description": "The alien is not yet present, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered or a character may unwittingly already host a growing alien embryo.",
@@ -67,7 +67,7 @@
                     }
                 },
                 "35": {
-                    "description": "The alien is a black quadruped the size of a cat or dog. It is already formidable in close quarters but is at its most vulnerable, so it will prefer to retreat to shadows rather than risk open confrontation.",
+                    "description": "The alien is a black quadruped the size of a cat or dog. It is already dangerous but is at its most vulnerable, so it will prefer to retreat to shadows, vents, or other tight spaces rather than risk open confrontation. It will attempt to take lone or weak characters by surprise.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },

@@ -5,29 +5,33 @@
 project_name: "Alien Infestation"
 
 # A short tagline to show in search.
-tagline: "Unleash an alien upon any story."
+tagline: "Unleash an alien horror upon any story."
 
-creator_notes: "This stage introduces an escalating alien infestation scenario on top of any chat, no matter how mundane.<br>
+creator_notes: "This stage introduces an escalating alien infestation scenario on top of any chat, transforming even the most mundane slice-of-life roleplay into a horrific life-or-death crisis.<br>
 <br>
 Whether you're [trapped aboard a doomed space freighter](https://venus.chub.ai/characters/Ravenok/adeline-larue-07a7a611) 
 or just [spending a quiet evening in with the nanny](https://venus.chub.ai/characters/Ravenok/bridget-f3fa710f), 
 an alien attack can come at any moment--just add this stage to your chat and watch things take an unsettling turn for the worse.<br>
 <br>
 **What It Does**<br>
-Things get eerie and an alien is gradually introduced to the chat's narrative. The longer the chat goes on, the more dangerous the alien becomes.<br>
-The stage adds approximately 150-200 tokens per request. It's still a little work-in-progress; if you don't mind spoilers, you can see the escalating alient prompt in your browser console, 
-and you may notice other debug output, as well. If you see errors or have comments, please let me know in the comments :).<br>
+The stage provides escalating instructions to the bot, immediately evoking an eerie atmosphere before gradually introducing a random alien monstrosity to the narrative. 
+The longer the chat goes on, the more dangerous the alien becomes. Works great as an end-game addition to a chat you're tiring of!<br>
+<br>
+It's actually a very simple concept, but this kind of slow-burn, measured escalation is something I've found LLMs handle very poorly without a lot of babysitting. This extension is basically a babysitter.<br>
+<br>
+The stage adds approximately 150-200 tokens per request. It's still a little work-in-progress; if you don't mind spoilers, you can see the prompt additions in your browser console, 
+and you may notice other debug output, as well. If you see errors or have comments, please let me know in the discussion :).<br>
 <br>
 **Configuration!**<br>
 You can tweak a few of the stage's behaviors:<br>
 * Pacing: sets the rate of escalation in the scenario, so you can slow the burn or get to the action more quickly.<br>
-* Sexual gratuity level: the scenario tends to be a little sexy by default, but can be cleaner or (much) more screwed up, if you so desire.<br>
-* Violence gratuity level: action will be a bit violent by default, but can be adjusted up or down.<br>
+* Sexual gratuity: the scenario tends to be a little sexy by default, but can be cleaner or (much) more screwed up, if you so desire.<br>
+* Violence gratuity: action will be a bit violent by default, but can be adjusted up or down.<br>
 Of course, this content is also influenced by the bot and other elements sent to the LLM, so these settings are just prominent nudges in one direction or the other.<br>
 <br>
 **Next Up**<br>
 I'd like to make the escalation a bit more intelligent, potentially assessing the scope of time a response represents, 
-so waiting around advances the alien's evolution more quickly than having a conversation; I have an idea of how to achieve this, but it's still in-progress. 
+so waiting around advances the alien's evolution more quickly than having a conversation; I have some ideas on how to achieve this, but it's still in-progress. 
 I'm also working on adding at least a couple of additional alien scenarios, 
 to be randomly selected per-chat (or deliberately selected through the settings), to increase replayability a bit.
 "

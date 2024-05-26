@@ -90,6 +90,72 @@
                     }
                 }
             }
+        },
+        "Skinwalker": {
+            "name": "Skinwalker",
+            "corePrompt": "There's a malevolent skinwalking alien on the loose; this alien can convincingly assume the identity of dead characters, manipulating their body and mimicking their speech. The alien desires to survive and procreate using this inhabited body. Honor its current status and behavior rules below as you continue the narrative.",
+            "evolutions": {
+                "0": {
+                    "description": "The alien's presence continues to go undetected, but vaguely unsettling occurrences suggest something is afoot.",
+                    "sexLevelDescriptions": {},
+                    "violenceLevelDescriptions": {}
+                },
+                "25": {
+                    "description": "The alien has inhabited the body of an expendable character and is using this identity to subtly sabotage or subvert the protagonists. The alien desires to remain undetected and avoid confrontation, so it attempts to act as its host would, but does not possess its host's knowledge. Outside of a host, the alien is a grotesque mass of tentacles; it invariably retreats and attempts to obtain a new identity.",
+                    "sexLevelDescriptions": {
+                        "1": "If the alien has a body, its primary goal is to seduce and procreate as much as possible. If the alien impregnates or is impregnated, its offspring comes to term with alarming speed and is quickly born as another alien organism."
+                    },
+                    "violenceLevelDescriptions": {}
+                },
+                "70": {
+                    "description": "The alien has inhabited the body of an expendable character and is using this identity to overtly sabotage or subvert the protagonists. The alien becomes increasingly desperate to achieve its goals through extreme means. It barely pretends to act as its host would, and does not possess its host's knowledge. Outside of a host, the alien is a grotesque mass of tentacles; it prefer to retreat and obtain a new identity.",
+                    "sexLevelDescriptions": {
+                        "1": "If the alien has a body, it highly desires to seduce and procreate as much as possible. If the alien impregnates or is impregnated, its offspring comes to term with alarming speed and is quickly born as another alien organism.",
+                        "2": "If the alien has a body, it will use any opportunity to seduce or even rape other characters in a desperate attempt to procreate. If the alien impregnates or is impregnated, its offspring comes to term with alarming speed and is quickly born as another alien organism."
+                    },
+                    "violenceLevelDescriptions": {}
+                }
+            }
+        },
+        "Stalker": {
+            "name": "Stalker",
+            "corePrompt": "There's a malevolent shadow alien on the loose; this alien is invisible but can only occupy shadowy areas. The alien cannot manifest in the light. It seeks to sabotage or subvert the protagonists. Honor its current status and behavior rules below as you continue the narrative.",
+            "evolutions": {
+                "0": {
+                    "description": "The alien's presence continues to go undetected, but vaguely unsettling occurrences and unnaturally dark shadows or lighting outages suggest something is afoot.",
+                    "sexLevelDescriptions": {},
+                    "violenceLevelDescriptions": {}
+                },
+                "25": {
+                    "description": "The alien's presence begins to become clear; an invisible force assails or molests characters in the shadows. Light and shadow behave unnaturally and characters make poor or irrational choices.",
+                    "sexLevelDescriptions": {
+                        "1": "Characters in dark or shadowy places may feel intimate sensations."
+                    },
+                    "violenceLevelDescriptions": {
+                        "1": "Characters in dark or shadowy places may feel spontaneous impacts or cuts."
+                    }
+                },
+                "40": {
+                    "description": "The alien's presence is apparent, even if the alien itself remains invisible; this unknown force severely assails or molests characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence. The unknown drives weak-willed characters to make critical mistakes.",
+                    "sexLevelDescriptions": {
+                        "1": "Characters in dark or shadowy places may be stripped or molested by invisible appendages.",
+                        "3": "Characters in dark or shadowy places may be stripped or intrusively violated by invisible appendages."
+                    },
+                    "violenceLevelDescriptions": {
+                        "1": "Characters in dark or shadowy places may be invisible assaulted by slashing or bludgeoning forces."
+                    }
+                },
+                "60": {
+                    "description": "The alien menace is volatile and pervasive; this unknown force dramatically assaults characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence. The unknown drives weak-willed characters to commit unspeakable acts.",
+                    "sexLevelDescriptions": {
+                        "1": "Characters in dark or shadowy places may be stripped or molested by invisible appendages.",
+                        "3": "Characters in dark or shadowy places may be stripped or intrusively violated by invisible appendages."
+                    },
+                    "violenceLevelDescriptions": {
+                        "1": "Characters in dark or shadowy places may be invisible assaulted by slashing or bludgeoning forces."
+                    }
+                }
+            }
         }
     }
 }

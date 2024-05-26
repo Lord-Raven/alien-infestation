@@ -48,7 +48,7 @@ type ChatStateType = any;
  ***/
 export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateType, ConfigType> {
 
-    readonly defaultAlien: string = 'Shoggoth';
+    readonly defaultAlien: string = 'Random';
     readonly defaultPacing: string = 'Deliberate';
     readonly defaultSexLevel: string = 'Rakish';
     readonly DefaultViolenceLevel: string = 'Bloody';
@@ -101,7 +101,11 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.alienMap = aliens.aliens;
         this.sexLevelDescriptions = aliens.sexLevelDescriptions;
         this.violenceLevelDescriptions = aliens.violenceLevelDescriptions;
-        this.alien = (config ? this.alienMap[config.alien] : null) ?? this.alienMap[this.defaultAlien];
+        const alienKeys = Object.keys(this.alienMap);
+        this.alien = (config ? this.alienMap[config.alien] : null) ?? 
+                (chatState['alien'] ? this.alienMap[chatState['alien']] : null) ?? 
+                this.alienMap[this.defaultAlien] ?? 
+                this.alienMap[alienKeys[Math.floor(Math.random() * alienKeys.length)]];
         this.pacing = (config ? this.pacingMap[config.pacing] : null) ?? this.pacingMap[this.defaultPacing];
         this.sexLevel = (config ? this.sexLevelMap[config.sex_level] : null) ?? this.sexLevelMap[this.defaultSexLevel];
         this.violenceLevel = (config ? this.violenceLevelMap[config.violence_level] : null) ?? this.violenceLevelMap[this.DefaultViolenceLevel];
@@ -128,7 +132,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
              briefly at the top of the screen, if any. ***/
             error: null,
             initState: null,
-            chatState: null,
+            chatState: this.buildChatState(),
         };
     }
 
@@ -182,7 +186,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             /*** @type null | string @description an error message to show
              briefly at the top of the screen, if any. ***/
             error: null,
-            chatState: null,
+            chatState: this.buildChatState(),
         };
     }
 
@@ -214,7 +218,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
              briefly at the top of the screen, if any. ***/
             error: null,
             systemMessage: null,
-            chatState: null
+            chatState: this.buildChatState()
         };
     }
 
@@ -248,7 +252,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         }
         let evolution: Evolution = this.getEvolution();
         let prompt = `[${this.alien.corePrompt} ${evolution.description} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
-        console.log(`${this.escalation} - ${prompt}`);
+        console.log(`Alien: ${this.alien.name}\nEscalation Score: ${this.escalation}\nPrompt: ${prompt}`);
         return prompt;
     }
 
@@ -287,4 +291,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         return {'escalation': this.escalation};
     }
 
+    buildChatState(): {[key: string]: any} {
+        return {'alien': this.alien.name};
+    }
 }

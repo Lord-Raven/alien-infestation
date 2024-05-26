@@ -103,7 +103,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.violenceLevelDescriptions = aliens.violenceLevelDescriptions;
         const alienKeys = Object.keys(this.alienMap);
         this.alien = (config ? this.alienMap[config.alien] : null) ?? 
-                (chatState['alien'] ? this.alienMap[chatState['alien']] : null) ?? 
+                (chatState && chatState['alien'] ? this.alienMap[chatState['alien']] : null) ?? 
                 this.alienMap[this.defaultAlien] ?? 
                 this.alienMap[alienKeys[Math.floor(Math.random() * alienKeys.length)]];
         this.pacing = (config ? this.pacingMap[config.pacing] : null) ?? this.pacingMap[this.defaultPacing];

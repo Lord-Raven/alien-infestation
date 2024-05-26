@@ -25,6 +25,7 @@ and you may notice other debug output, as well. If you see errors or have commen
 <br>
 **Configuration!**<br>
 You can tweak a few of the stage's behaviors:<br>
+* Alien: random by default, you can select a particular alien archetype to play with--or be surprised.
 * Pacing: sets the rate of escalation in the scenario, so you can slow the burn or get to the action more quickly.<br>
 * Sexual gratuity: the scenario tends to be a little scintilating by default, but can be cleaner or (much) more screwed up, if you so desire.<br>
 * Violence gratuity: action will be a bit violent by default, but can be adjusted up or down.<br>
@@ -33,8 +34,7 @@ Of course, this content is also influenced by the bot and other elements sent to
 **Next Up**<br>
 I'd like to make the rate of escalation a bit more intelligent, potentially assessing the scope of time a response represents, 
 so waiting around advances the alien's evolution more quickly than having a conversation; I have some ideas on how to achieve this, but it's still in-progress. 
-I'm also working on adding at least a couple of additional alien scenarios, 
-to be randomly selected per-chat (or deliberately selected through the settings), to increase replayability a bit.
+I'm also working on add some more alien scenarios.
 "
 
 # 'PUBLIC', 'PRIVATE', or 'UNLISTED'.

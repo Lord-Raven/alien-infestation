@@ -13,10 +13,10 @@
     "aliens": {
         "Shoggoth": {
             "name": "Shoggoth",
-            "corePrompt": "There is a malevolent alien presence on the loose, lurking and possessing characters in its effort to sabotage or subvert the protagonists and others. Honor its current status and behavior rules below.",
+            "corePrompt": "There is a malevolent alien presence on the loose, lurking and possessing characters in its effort to sabotage or subvert the protagonists and others. Consider and respect its current status and behavior rules below.",
             "evolutions": {
                 "0": {
-                    "description": "The alien's presence continues to go undetected, but vaguely unsettling occurrences suggest something is afoot.",
+                    "description": "The alien's presence continues to go undetected, but subtle-yet-unsettling occurrences suggest something is afoot.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },
@@ -50,10 +50,10 @@
         },
         "Xenomorph": {
             "name": "Xenomorph",
-            "corePrompt": "There's an alien on the loose--similar to the titular creatures of the Aliens franchise--, lurking and eliminating characters in its effort to survive and multiply. Honor its current status and behavior rules below.",
+            "corePrompt": "There's an alien on the loose--similar to the titular creatures of the Aliens franchise--, lurking and eliminating characters in its effort to survive and multiply. Consider and respect its current status and behavior rules below.",
             "evolutions": {
                 "0": {
-                    "description": "The alien is not yet present, but minor unsettling occurrences vaguely suggest something isn't right. An alien egg may be encountered or a character may unwittingly already host a growing alien embryo.",
+                    "description": "The alien is not yet present, but subtle-yet-unsettling occurrences suggest something isn't right. An alien egg may be encountered or a character may unwittingly already host a growing alien embryo.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },
@@ -93,10 +93,10 @@
         },
         "Skinwalker": {
             "name": "Skinwalker",
-            "corePrompt": "There's a malevolent skinwalking alien on the loose; this alien can convincingly assume the identity of dead characters, manipulating their body and mimicking their speech. The alien desires to survive and procreate using this inhabited body. Honor its current status and behavior rules below.",
+            "corePrompt": "There's a malevolent skinwalking alien on the loose; this alien can convincingly assume the identity of dead characters, manipulating their body and mimicking their speech. The alien desires to survive and procreate using this inhabited body. Consider and respect its current status and behavior rules below.",
             "evolutions": {
                 "0": {
-                    "description": "The alien's presence continues to go undetected, but vaguely unsettling occurrences suggest something is afoot.",
+                    "description": "The alien's presence continues to go undetected, but subtle-yet-unsettling occurrences suggest something is afoot.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },
@@ -119,7 +119,7 @@
         },
         "Stalker": {
             "name": "Stalker",
-            "corePrompt": "There's a shadow alien on the loose; this alien is invisible but can only occupy shadows and cannot manifest in the light. It seeks to sabotage or subvert the protagonists. Honor its current status and behavior rules below.",
+            "corePrompt": "There's a shadow alien on the loose; this alien is invisible but can only occupy shadows and cannot manifest in the light. It seeks to sabotage or subvert the protagonists. Consider and respect its current status and behavior rules below.",
             "evolutions": {
                 "0": {
                     "description": "The alien's presence remains undetected, but unnaturally dark shadows or lighting outages suggest something is afoot.",

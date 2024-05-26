@@ -70,7 +70,7 @@ config_schema:
   properties:
     alien:
       title: Alien
-      description: Alien present in the scenario.
+      description: Alien archetype present in the scenario.
       type: string
       default: Random
       enum: ["Random", "Shoggoth", "Skinwalker", "Stalker", "Xenomorph"]

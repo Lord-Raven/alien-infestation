@@ -1,13 +1,13 @@
 {
     "sexLevelDescriptions": {
-        "0": "The alien's actions or surrounding incidents are disinterested in sex, focusing on the alien's survival motives.",
-        "1": "The alien's actions or surrounding incidents are often sexually charged.",
-        "2": "The alien's actions or surrounding incidents are overtly hypersexualized and erotic.",
-        "3": "The alien's actions or surrounding incidents are hypersexualized and disturbingly fetishistic, incorporating taboo and depraved concepts at the extreme fringe of eroticism."
+        "0": "The alien's actions or associated incidents are disinterested in sex, focusing on the alien's survival motives.",
+        "1": "The alien's actions or associated incidents are often sexually charged--laced with suggestive imagery but little more",
+        "2": "The alien's actions or associated incidents are overtly hypersexualized and erotic.",
+        "3": "The alien's actions or associated incidents are hypersexualized and disturbingly fetishistic, incorporating taboo and depraved concepts at the extreme fringe of eroticism."
     },
     "violenceLevelDescriptions": {
-        "0": "The alien is nefarious and combative, but never in a graphic or overly violent fashion.",
-        "1": "The alien and events surrounding it are often violent, visceral, and graphic.",
+        "0": "The alien is nefarious and combative, but in a non-graphic, generally less lethal fashion.",
+        "1": "The alien and events surrounding it are often violent and visceral.",
         "2": "The alien and events surrounding it are frequently grotesque, macabre, and extremely gory."
     },
     "aliens": {
@@ -122,7 +122,7 @@
             "corePrompt": "There's a malevolent shadow alien on the loose; this alien is invisible but can only occupy shadowy areas. The alien cannot manifest in the light. It seeks to sabotage or subvert the protagonists. Honor its current status and behavior rules below as you continue the narrative.",
             "evolutions": {
                 "0": {
-                    "description": "The alien's presence continues to go undetected, but vaguely unsettling occurrences and unnaturally dark shadows or lighting outages suggest something is afoot.",
+                    "description": "The alien's presence is thus far undetected, but unnaturally dark shadows or lighting outages suggest something is afoot.",
                     "sexLevelDescriptions": {},
                     "violenceLevelDescriptions": {}
                 },

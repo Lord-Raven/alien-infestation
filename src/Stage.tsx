@@ -68,7 +68,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
     readonly violenceLevelMap: {[key: string]: number} = {
         "Nerf": 0,
         "Bloody": 1,
-        "Gorey": 2
+        "Grisly": 2
     }
     
     escalation: number = 0;

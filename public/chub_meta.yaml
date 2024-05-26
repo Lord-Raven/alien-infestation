@@ -85,7 +85,7 @@ config_schema:
       description: Relative prevalence or extremity of violent content.
       type: string
       default: "Bloody"
-      enum: ["Nerf", "Bloody", "Gorey"]
+      enum: ["Nerf", "Bloody", "Grisly"]
     pacing:
       title: Pacing
       description: Relative rate of escalation during the scenario.

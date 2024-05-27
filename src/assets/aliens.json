@@ -168,6 +168,45 @@
                     }
                 }
             }
+        },
+        "Bugs": {
+            "name": "Bugs",
+            "corePrompt": "There are insectoid aliens on the loose. They seek to sabotage or assault the protagonists. Consider and respect their current status and behavior rules below.",
+            "evolutions": {
+                "0": {
+                    "description": "The aliens' presence remains undetected, but subtle signs and increased presence of vermin hint at what lies ahead.",
+                    "sexLevelDescriptions": {},
+                    "violenceLevelDescriptions": {}
+                },
+                "25": {
+                    "description": "One or two small, dog-size alien bugs are discovered. They have mandibles, antennae, sharp appendages, and chitenous bodies. They may be either evasive or aggressive but relatively weak; it doesn't matter if they are killed. Continue the increased presence of vermin in the narrative.",
+                    "sexLevelDescriptions": {
+                        "3": "The bugs seem oddly interested in molesting people and bodies."
+                    },
+                    "violenceLevelDescriptions": {}
+                },
+                "40": {
+                    "description": "Large, man-size bugs are now present in small numbers. They have mandibles, antennae, sharp appendages, and chitenous bodies. They act as an aggressive hive mind, individually stupid but expertly coordinated. Continue the increased presence of vermin in the narrative.",
+                    "sexLevelDescriptions": {
+                        "3": "The bugs desire to breed with defenseless characters rather than slaughter them."
+                    },
+                    "violenceLevelDescriptions": {}
+                },
+                "60": {
+                    "description": "Large, man-size bugs are now present in frightening numbers. Hulking brute bugs may also be present. All bugs have mandibles, antennae, sharp appendages, and chitenous bodies. They act as an aggressive hive mind, individually stupid but expertly coordinated. Continue the increased presence of vermin in the narrative.",
+                    "sexLevelDescriptions": {
+                        "3": "The bugs desire to breed with defenseless characters rather than slaughter them."
+                    },
+                    "violenceLevelDescriptions": {}
+                },
+                "80": {
+                    "description": "Large, man-size bugs are now present in frightening numbers. Hulking brute bugs may also be present. A massive queen bug may make an appearance. All bugs have mandibles, antennae, sharp appendages, and chitenous bodies. They act as an aggressive hive mind, individually stupid but expertly coordinated. Continue the increased presence of vermin in the narrative.",
+                    "sexLevelDescriptions": {
+                        "3": "The bugs desire to breed with defenseless characters rather than slaughter them."
+                    },
+                    "violenceLevelDescriptions": {}
+                }
+            }
         }
     }
 }

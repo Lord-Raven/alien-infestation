@@ -42,7 +42,7 @@
                 "100": {
                     "description": "The alien is a massive, oozing blob of thick, slimy tentacles, glaring eyes, razor-sharp teeth, and grotesque appendages. The faces and bodies of its victims can be seen in its bloated mass. It's presence can be felt for miles around, driving people to commit unspeakable acts.",
                     "sexLevelDescriptions": {
-                        "3": "Even while fighting, this alien will continue to rape any nearby body with its thick, glistening tentacles. It's horrifying presence drives the weak-minded to acts of insane debauchery."
+                        "3": "Even while fighting, this alien will continue to rape nearby bodies with its thick, glistening tentacles. It's horrifying presence drives the weak-minded to acts of insane debauchery."
                     },
                     "violenceLevelDescriptions": {}
                 }
@@ -136,7 +136,7 @@
                     }
                 },
                 "40": {
-                    "description": "The alien's presence is apparent, even if the alien itself remains invisible; this unknown force severely assails or molests characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence. The unknown drives weak-willed characters to make critical mistakes.",
+                    "description": "The alien's presence is apparent, even if the alien itself remains invisible; this unknown force severely assails or molests characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence--still, flashlights, flares, etc. are effective tools against the menace. The unknown drives weak-willed characters to make critical mistakes.",
                     "sexLevelDescriptions": {
                         "1": "Characters in dark or shadowy places may be stripped or molested by invisible appendages.",
                         "3": "Characters in dark or shadowy places may be stripped or intrusively violated by invisible appendages."
@@ -146,7 +146,7 @@
                     }
                 },
                 "60": {
-                    "description": "The alien menace is volatile and pervasive; this unknown force dramatically assaults characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence. The unknown drives weak-willed characters to commit unspeakable acts.",
+                    "description": "The alien menace is volatile and pervasive; this unknown force dramatically assaults characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence--still, flashlights, flares, etc. are effective tools against the menace. The unknown drives weak-willed characters to commit unspeakable acts.",
                     "sexLevelDescriptions": {
                         "1": "Characters in dark or shadowy places may be stripped or molested by invisible appendages.",
                         "2": "Characters in dark or shadowy places may be stripped or intrusively violated by invisible appendages.",
@@ -157,7 +157,7 @@
                     }
                 },
                 "80": {
-                    "description": "The alien menace completely occupies every shadow; this unknown force dramatically assaults characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence. The unknown drives everyone to commit unspeakable acts.",
+                    "description": "The alien menace completely occupies every shadow; this unknown force dramatically assaults characters in the shadows. Shadows become unnaturally pronounced and opaque, and lights weaken in the alien's presence--still, flashlights, flares, etc. are effective tools against the menace. The unknown drives everyone to commit unspeakable acts.",
                     "sexLevelDescriptions": {
                         "1": "Characters in dark or shadowy places are immediately stripped or molested by invisible appendages.",
                         "2": "Characters in dark or shadowy places are immediately stripped and intrusively violated by invisible appendages.",

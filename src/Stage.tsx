@@ -70,6 +70,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         "Bloody": 1,
         "Grisly": 2
     }
+    readonly climaxPrompt: string = 'Though the situation is dire, the narrative (or other characters) may present clever, daring, climactic opportunities to finally defeat the alien menace once and for all.';
     
     escalation: number = 0;
     alienMap: {[key: string]: Alien};
@@ -148,7 +149,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
 
     setFromMessageState(messageState: MessageStateType) {
         if (messageState != null) {
-            this.escalation = messageState['escalation'];
+            this.escalation = messageState['escalation'] ?? 0;
         }
     }
 
@@ -251,7 +252,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             return '';
         }
         let evolution: Evolution = this.getEvolution();
-        let prompt = `[${this.alien.corePrompt} ${evolution.description} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
+        let prompt = `[${this.alien.corePrompt} ${evolution.description} ${this.escalation > 75 ? this.climaxPrompt : ''} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
         console.log(`Alien: ${this.alien.name}\nEscalation Score: ${this.escalation}\nPrompt: ${prompt}`);
         return prompt;
     }

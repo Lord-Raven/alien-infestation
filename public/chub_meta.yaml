@@ -31,23 +31,24 @@ You can tweak a few of the stage's behaviors:<br>
 * Violence gratuity: action will be a bit violent by default, but can be adjusted up or down.<br>
 Of course, this content is also influenced by the bot and other elements sent to the LLM, so these settings are just prominent nudges in one direction or the other.<br>
 <br>
+**Changes - 6/1/2024**<br>
+* Made the repository public. It's gross. I'm not a Typescript developer, and I'm just playing around with stages, 
+so there's a lot of template residue and bad practices. But I hear some folks would like to be able to look at it, 
+so I'm making it public. You can look at it by hitting the Source link down below.<br>
+* Updated the underlying stages version<br>
+* Minor data structure changes<br>
+<br>
 **Next Up**<br>
 I'd like to make the rate of escalation a bit more intelligent, potentially assessing the scope of time a response represents, 
 so waiting around advances the alien's evolution more quickly than having a conversation; I have some ideas on how to achieve this, but it's still in-progress. 
-I'm also working on add some more alien scenarios.
+I'll probably also add some more alien scenarios.
 "
 
 # 'PUBLIC', 'PRIVATE', or 'UNLISTED'.
 visibility: 'PUBLIC'
 
 # 'ADJACENT' | 'NONE' | 'COVER' | 'FULLSCREEN'
-# 'ADJACENT' is default. The frame will display on the side of the
-#   chat on desktop and above/in the top half of the chat on mobile.
-# 'NONE' will not display, only run.
-# 'COVER' will, indeed, cover the chat history completely,
-#   but leave the text input box.
-# 'FULLSCREEN' will make nothing below the header bar
-#   show except for your stage.
+# This stage doesn't have anything to display; it does its job behind the scenes.
 position: 'NONE'
 
 # Self-explanatory.

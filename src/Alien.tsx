@@ -1,4 +1,4 @@
-export interface Aliens {
+export interface AlienData {
     aliens: {[key: string]: Alien};
     sexLevelDescriptions: {[key: string]: string};
     violenceLevelDescriptions: {[key: string]: string};

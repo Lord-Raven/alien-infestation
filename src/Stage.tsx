@@ -1,7 +1,7 @@
 import {ReactElement} from "react";
 import {StageBase, StageResponse, InitialData, Message} from "@chub-ai/stages-ts";
 import {LoadResponse} from "@chub-ai/stages-ts/dist/types/load";
-import {Alien, Aliens, Evolution} from "./Alien";
+import {Alien, Evolution} from "./Alien";
 import aliens from './assets/aliens.json';
 
 /***
@@ -110,11 +110,12 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
         this.pacing = (config ? this.pacingMap[config.pacing] : null) ?? this.pacingMap[this.defaultPacing];
         this.sexLevel = (config ? this.sexLevelMap[config.sex_level] : null) ?? this.sexLevelMap[this.defaultSexLevel];
         this.violenceLevel = (config ? this.violenceLevelMap[config.violence_level] : null) ?? this.violenceLevelMap[this.DefaultViolenceLevel];
+        console.log("Configuration values loaded:");
         console.log(config);
         if (messageState) {
             this.setFromMessageState(messageState);
         }
-        console.log("Alien loaded:" + this.alien.name);
+        console.log("Current alien archetype:" + this.alien.name);
     }
 
     async load(): Promise<Partial<LoadResponse<InitStateType, ChatStateType, MessageStateType>>> {

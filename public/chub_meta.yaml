@@ -14,29 +14,27 @@ or just [spending a quiet evening in with the nanny](https://venus.chub.ai/chara
 an alien attack can come at any moment--just add this stage to your chat and watch things take an unsettling turn for the worse.<br>
 <br>
 **What It Does**<br>
-The stage provides escalating instructions to the bot, evoking an eerie atmosphere as it slowly introduces a random, growing alien menace to the narrative. 
+The stage provides escalating instructions to the bot, evoking an eerie atmosphere as it slowly introduces one of six evolving alien menaces to the narrative. 
 The longer the chat goes on, the more dangerous the alien becomes. Works great as end-game revitalization for a chat you're tiring of!<br>
 <br>
-It's actually a very simple concept, but this kind of slow-burn, measured escalation is something I've found LLMs handle very poorly without a lot of babysitting. 
+It's actually a very simple concept, but this kind of slow-burn, measured escalation is something I've found LLMs handle very poorly without a lot of hand-holding. 
 This extension is basically a babysitter that feeds gradually more dire instructions to the bot.<br>
 <br>
-The stage adds approximately 150-200 tokens per request. It's still a little work-in-progress; if you don't mind spoilers, you can see the prompt additions in your browser console, 
+The stage adds approximately 150-200 tokens per request. If you don't mind spoilers, you can see the prompt additions in your browser console, 
 and you may notice other debug output, as well. If you see errors or have comments, please let me know in the discussion :).<br>
 <br>
 **Configuration!**<br>
 You can tweak a few of the stage's behaviors:<br>
 * Alien: random by default, you can select a particular alien archetype to play with--or be surprised.<br>
 * Pacing: sets the rate of escalation in the scenario, so you can slow the burn or get to the action more quickly.<br>
-* Sexual gratuity: the scenario tends to be a little scintilating by default, but can be cleaner or (much) more screwed up, if you so desire.<br>
-* Violence gratuity: action will be a bit violent by default, but can be adjusted up or down.<br>
+* Sexual gratuity: the scenario tends to be a little scintillating by default, but can be cleaner or (much) more screwed up, if you so desire.<br>
+* Violent gratuity: action will be a bit violent by default, but can be adjusted up or down.<br>
 Of course, this content is also influenced by the bot and other elements sent to the LLM, so these settings are just prominent nudges in one direction or the other.<br>
 <br>
-**Changes - 6/1/2024**<br>
-* Made the repository public. It's gross. I'm not a Typescript developer, and I'm just playing around with stages, 
-so there's a lot of template residue and bad practices. But I hear some folks would like to be able to look at it, 
-so I'm making it public. You can look at it by hitting the Source link down below.<br>
-* Updated the underlying stages version<br>
-* Minor data structure changes<br>
+**Changes - 6/5/2024**<br>
+* Added new alien archetype: Flood<br>
+* Cleaned up some of the code a bit, so it's marginally less painful to look at in github.<br>
+* Fixed some typos and updated some verbiage.<br>
 <br>
 **Next Up**<br>
 I'd like to make the rate of escalation a bit more intelligent, potentially assessing the scope of time a response represents, 
@@ -74,7 +72,7 @@ config_schema:
       description: Alien archetype present in the scenario.
       type: string
       default: Random
-      enum: ["Random", "Bugs", "Shoggoth", "Skinwalker", "Stalker", "Xenomorph"]
+      enum: ["Random", "Bugs", "Flood", "Shoggoth", "Skinwalker", "Stalker", "Xenomorph"]
     sex_level:
       title: Gratuity, Sex
       description: Relative prevalence or extremity of sexual content.

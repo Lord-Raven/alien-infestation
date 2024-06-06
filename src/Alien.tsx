@@ -12,6 +12,6 @@ export interface Alien {
 
 export interface Evolution {
     description: string;
-    sexLevelDescriptions: {[key: string]: string};
-    violenceLevelDescriptions: {[key: string]: string};
+    sexLevelDescriptions?: {[key: string]: string};
+    violenceLevelDescriptions?: {[key: string]: string};
 }

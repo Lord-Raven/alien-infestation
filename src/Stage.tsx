@@ -141,7 +141,7 @@ export class Stage extends StageBase<InitStateType, ChatStateType, MessageStateT
             return '';
         }
         let evolution: Evolution = this.getEvolution();
-        let prompt = `[${this.alien.corePrompt} ${evolution.description} ${this.escalation > 75 ? this.climaxPrompt : ''} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
+        let prompt = `[Alien scenario: ${this.alien.corePrompt}\nCurrent situation: ${evolution.description} ${this.escalation > 75 ? this.climaxPrompt : ''} ${this.getSexLevelDescription()} ${this.getViolenceLevelDescription()}]`;
         console.log(`Alien: ${this.alien.name}\nEscalation Score: ${this.escalation}\nPrompt: ${prompt}`);
         return prompt;
     }
